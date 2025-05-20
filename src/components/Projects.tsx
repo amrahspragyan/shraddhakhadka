@@ -11,6 +11,15 @@ interface Project {
   achievements: string[];
   tags: string[];
   details?: string;
+  company: string;
+  period: string;
+  location: string;
+  projects: {
+    title: string;
+    description: string;
+    responsibilities: string[];
+    imageUrl?: string;
+  }[];
 }
 
 // Move ProjectCard outside of the Projects component and memoize it
@@ -91,24 +100,20 @@ const Projects = () => {
 
   const eventImages = [
     {
-      url: "/shraddhakhadka/images/1.jpg",
+      url: "/images/1.jpg",
       caption: "Education Fair - Student Engagement"
     },
     {
-      url: "/shraddhakhadka/images/2.jpg",
+      url: "/images/2.jpg",
       caption: "University Partnership Meeting"
     },
     {
-      url: "/shraddhakhadka/images/3.jpg",
+      url: "/images/3.jpg",
       caption: "Student Counseling Session"
     },
     {
-      url: "/shraddhakhadka/images/4.jpg",
+      url: "/images/4.jpg",
       caption: "International Education Workshop"
-    },
-    {
-      url: "/shraddhakhadka/images/5.jpg",
-      caption: "International University Partnerships"
     }
   ];
 
@@ -116,7 +121,10 @@ const Projects = () => {
     {
       id: 1,
       title: 'Bhasha Tech Inc. – Language Learning App',
-      description: 'Led the development and launch of an innovative language learning mobile application as Product Manager & Co-Founder, focusing on international users in multilingual regions.',
+      company: 'Bhasha Tech Inc.',
+      period: 'Jan 2025 – Present',
+      location: 'Dallas, TX',
+      description: 'Led the development and launch of an innovative language learning mobile application as Product Manager & Co-Founder.',
       type: 'video',
       videoUrl: 'https://www.youtube.com/embed/UIEzuL8PcpI',
       achievements: [
@@ -126,6 +134,7 @@ const Projects = () => {
         'Boosted user retention by 25%'
       ],
       tags: ['Product Management', 'UX/UI', 'Analytics', 'Monetization', 'Leadership'],
+      projects: [],
       details: `
 **Project:** Bhasha Tech Inc. – Language Learning App
 **Role:** Product Manager & Co-Founder
@@ -170,6 +179,9 @@ Bhasha Tech Inc. is a startup focused on building a language learning mobile app
     {
       id: 2,
       title: 'Dream, Act, Achieve Education Event',
+      company: 'Student Affairs Pvt. Ltd.',
+      period: '2014 – 2022',
+      location: 'Kathmandu, Nepal',
       description: 'Large-scale education fair connecting students with international universities.',
       type: 'video',
       videoUrl: 'https://www.youtube.com/embed/AUwSyI58RXI',
@@ -179,6 +191,7 @@ Bhasha Tech Inc. is a startup focused on building a language learning mobile app
         'Multiple countries represented'
       ],
       tags: ['Event Management', 'Partnerships', 'Student Recruitment'],
+      projects: [],
       details: `
 **Project:** Dream, Act, Achieve – Large-Scale Education Fair
 **Role:** Founder & Director
@@ -221,15 +234,30 @@ To empower students with access to global education opportunities by organizing 
     {
       id: 3,
       title: 'International University Partnerships',
+      company: 'Student Affairs Pvt. Ltd.',
+      period: '2014 – 2022',
+      location: 'Kathmandu, Nepal',
       description: 'Strategic partnership development with universities in the US and India.',
       type: 'image',
-      imageUrl: `${import.meta.env.BASE_URL}5.jpg`,
+      imageUrl: '/images/5.jpg',
       achievements: [
         'Partnerships with multiple US universities',
         'Streamlined admission pipelines',
         'Increased student placements'
       ],
       tags: ['Partnerships', 'Business Development', 'Education'],
+      projects: [
+        {
+          title: 'University Partnerships',
+          description: 'Building strategic alliances with international universities',
+          responsibilities: [
+            'Led outreach initiatives to contact admissions offices',
+            'Established strategic alliances with 30+ institutions',
+            'Coordinated university webinars and virtual fairs'
+          ],
+          imageUrl: '/images/5.jpg'
+        }
+      ],
       details: `
 **Project:** Building International University Partnerships
 **Role:** Founder & Director
@@ -303,16 +331,16 @@ To expand student placement opportunities and streamline admissions by establish
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300">
-              <div className="relative">
+            <div className="relative">
               <div className="h-56 w-full">
                 <img
-                  src={`${import.meta.env.BASE_URL}5.jpg`}
+                  src="/images/5.jpg"
                   alt="Project Image"
                   className="w-full h-full object-cover"
                 />
               </div>
-              </div>
-              <div className="p-6">
+            </div>
+            <div className="p-6">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">International University Partnerships</h3>
               <p className="text-gray-600 mb-4">Strategic partnership development with universities in the US and India.</p>
                 
@@ -339,7 +367,7 @@ To expand student placement opportunities and streamline admissions by establish
                   <ExternalLink size={16} className="ml-1" />
                 </button>
               </div>
-        </div>
+          </div>
 
           <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm border border-gray-100">
             <div className="p-6">
