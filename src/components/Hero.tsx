@@ -34,7 +34,7 @@ const Hero = () => {
                 <span>Contact Me</span>
               </a>
               <a 
-                href="/shraddhakhadka/ShraddhaCV.pdf"
+                href="/ShraddhaCV.pdf"
                 download="ShraddhaCV.pdf"
                 className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-800 border border-gray-300 px-4 py-2 rounded-md transition-colors"
               >
@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <img 
-                src="/shraddhakhadka/images/shraddha-profle.jpeg"
+                src="/images/shraddha-profle.jpeg"
                 alt="Shraddha Khadka"
                 className="w-full h-full object-cover"
               />

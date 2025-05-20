@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://amrahspragyan.github.io/shraddhakhadka",
+  "homepage": "https://shraddhakhadka.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
