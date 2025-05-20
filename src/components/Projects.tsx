@@ -105,6 +105,10 @@ const Projects = () => {
     {
       url: "/shraddhakhadka/images/4.jpg",
       caption: "International Education Workshop"
+    },
+    {
+      url: "/shraddhakhadka/images/5.jpg",
+      caption: "International University Partnerships"
     }
   ];
 

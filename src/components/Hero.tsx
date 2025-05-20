@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="w-full md:w-1/2 order-1 md:order-2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <img 
-                src="/shraddhakhadka/images/shraddha-profile.jpeg" 
+                src="/shraddhakhadka/images/shraddha-profle.jpeg"
                 alt="Shraddha Khadka"
                 className="w-full h-full object-cover"
               />
