@@ -91,19 +91,19 @@ const Projects = () => {
 
   const eventImages = [
     {
-      url: `${import.meta.env.BASE_URL}1.jpg`,
+      url: "/shraddhakhadka/images/1.jpg",
       caption: "Education Fair - Student Engagement"
     },
     {
-      url: `${import.meta.env.BASE_URL}2.jpg`,
+      url: "/shraddhakhadka/images/2.jpg",
       caption: "University Partnership Meeting"
     },
     {
-      url: `${import.meta.env.BASE_URL}3.jpg`,
+      url: "/shraddhakhadka/images/3.jpg",
       caption: "Student Counseling Session"
     },
     {
-      url: `${import.meta.env.BASE_URL}4.jpg`,
+      url: "/shraddhakhadka/images/4.jpg",
       caption: "International Education Workshop"
     }
   ];

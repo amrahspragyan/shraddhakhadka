@@ -125,7 +125,7 @@ const Header = () => {
               <X size={24} />
             </button>
             <iframe
-              src="./ShraddhaCV.pdf"
+              src="/shraddhakhadka/ShraddhaCV.pdf"
               title="Resume"
               className="w-full h-full rounded-lg"
             />
